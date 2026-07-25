@@ -8,7 +8,7 @@ Built in the Ghost Note proposal-site format (lime / purple / cream on near-blac
 
 The site opens on a password gate.
 
-**Access code:** `@GNBeaverton`
+**Access code:** `beaverton`
 
 The gate is client-side only. It keeps the proposal from casual view, but it is **not** real security — the code lives in the page source. Don't treat it as protection for anything sensitive.
 
@@ -75,7 +75,7 @@ Password gate → Nav (dropdown menu) → Hero → Agency → Executive Summary 
 
 ## Pricing model
 
-Single price: **$60,000** for Phases 1 + 2, structured as **$15,000/month across 4 months**. Phase 3 (marketing engine) is optional and scoped separately.
+Single price: **$85,000** for Phases 1 + 2, structured as **$21,250/month across 4 months**. Phase 3 (marketing engine) is optional and scoped separately.
 
 ---
 

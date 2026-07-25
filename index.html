@@ -266,6 +266,8 @@ footer{background:var(--black);border-top:1px solid var(--bd);padding:36px 48px;
 .ft-r p{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.28);line-height:2;text-align:right}
 
 @media(max-width:960px){
+  #pw-gate{justify-content:flex-start!important;padding-top:11vh!important}
+  #pw-gate .gate-logo{height:44px!important;margin-bottom:34px!important}
   .nav-bar{padding:0 16px}
   .nav-center{display:none}
   .nav-links-grid{grid-template-columns:1fr 1fr}
@@ -322,12 +324,12 @@ footer{background:var(--black);border-top:1px solid var(--bd);padding:36px 48px;
 <!-- PASSWORD GATE -->
 <div id="pw-gate" style="position:fixed;inset:0;background:#000;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;transition:opacity .6s ease">
   <div style="width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;gap:0">
-    <img src="https://www.ghostnoteagency.com/wp-content/uploads/2022/02/GN_2020_Logo-horizontal-small-1.png" alt="Ghost Note" style="height:56px;width:auto;object-fit:contain;margin-bottom:52px;opacity:.9" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <img class="gate-logo" src="https://www.ghostnoteagency.com/wp-content/uploads/2022/02/GN_2020_Logo-horizontal-small-1.png" alt="Ghost Note" style="height:56px;width:auto;object-fit:contain;margin-bottom:52px;opacity:.9" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
     <div style="font-family:'Staff Grotesque','DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:52px;display:none">Ghost Note</div>
     <div style="font-family:'Staff Grotesque','DM Sans',system-ui,sans-serif;font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px;text-align:center">Confidential — Enter Access Code</div>
     <div style="width:100%;position:relative">
       <input id="pw-input" type="password" placeholder="••••••••••••••" autocomplete="off" spellcheck="false"
-        style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Staff Grotesque','DM Sans',system-ui,sans-serif;font-size:15px;padding:16px 96px 16px 20px;outline:none;letter-spacing:.06em;transition:border-color .2s;-webkit-appearance:none"
+        style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Staff Grotesque','DM Sans',system-ui,sans-serif;font-size:16px;padding:16px 96px 16px 20px;outline:none;letter-spacing:.06em;transition:border-color .2s;-webkit-appearance:none"
         oninput="pwClear()" onkeydown="if(event.key==='Enter')pwSubmit()">
       <button id="pw-toggle" onclick="pwToggle()" type="button" title="Show/hide"
         style="position:absolute;right:52px;top:0;bottom:0;width:44px;background:none;border:none;border-right:1px solid rgba(255,255,255,.08);cursor:pointer;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);transition:color .2s;padding:0">
@@ -386,8 +388,8 @@ footer{background:var(--black);border-top:1px solid var(--bd);padding:36px 48px;
     </div>
     <div class="hero-stats">
       <div class="h-stat"><label>Prepared By</label><span>Ghost Note</span></div>
-      <div class="h-stat"><label>Investment</label><span>$60,000</span></div>
-      <div class="h-stat"><label>Structure</label><span>$15K / mo</span></div>
+      <div class="h-stat"><label>Investment</label><span>$85,000</span></div>
+      <div class="h-stat"><label>Structure</label><span>$21.25K / mo</span></div>
       <div class="h-stat"><label>Duration</label><span>4 Months</span></div>
       <div class="h-stat"><label>First Event</label><span>June 2027</span></div>
       <div class="h-stat"><label>Phases</label><span>1 + 2</span></div>
@@ -446,7 +448,7 @@ footer{background:var(--black);border-top:1px solid var(--bd);padding:36px 48px;
       <div class="sec-hd-left">
         <span class="sec-eye">Executive Summary</span>
         <h2 class="sec-title">A race people<br><em>come back to.</em></h2>
-        <p class="sec-sub">The opportunity is to build a brand foundation strong enough to launch one event and flexible enough to carry the series that follows, starting lean while you're pre-revenue.</p>
+        <p class="sec-sub">The opportunity is to build a brand foundation strong enough to launch one event and flexible enough to carry the series that follows, done properly the first time so nothing has to be rebuilt.</p>
       </div>
       <button class="sec-toggle" onclick="toggleSec(this)">+</button>
     </div>
@@ -459,8 +461,8 @@ footer{background:var(--black);border-top:1px solid var(--bd);padding:36px 48px;
           <div class="exec-pq"><p>"Get the story right, and the flyer, the site, and the second event all get easier."</p></div>
         </div>
         <div class="exec-c">
-          <p>You asked us to recommend the right scope and pricing rather than execute against a spec. We've taken that seriously, and responded with a real point of view on how to sequence this against a pre-revenue reality.</p>
-          <p>The result is one simple structure: the full foundation, both phases, delivered over four months at a flat monthly rate. It begins with the strategy phase, the asset everything else is built on, and runs straight through to a live, registerable brand well ahead of June 2027, without a large sum due up front.</p>
+          <p>You asked us to recommend the right scope and pricing rather than execute against a spec. We've taken that seriously, and responded with a real point of view on what it takes to build this well.</p>
+          <p>The result is one engagement: the full foundation and launch, both phases, delivered as a single continuous run. It begins with the strategy phase, the asset everything else is built on, and carries through to a live, registerable brand well ahead of June 2027. One senior team, one timeline, one price.</p>
           <p>The result should be a brand that feels made for the mothers of Beaverton, works on race day, and still holds up at event number four.</p>
         </div>
       </div>
@@ -484,7 +486,7 @@ footer{background:var(--black);border-top:1px solid var(--bd);padding:36px 48px;
         <div class="tn">
           <div class="tn-n">01</div>
           <div class="tn-t">Building From Zero</div>
-          <p class="tn-b">You're pre-revenue with the first event eleven months out and no audience yet. The brand has to earn attention before it can earn a registration, which means the story has to be right before the spend ramps up.</p>
+          <p class="tn-b">You're building an audience from zero with the first event eleven months out. The brand has to earn attention before it can earn a registration, which means the story and the identity have to be right before any of it goes public.</p>
         </div>
         <div class="tn">
           <div class="tn-n">02</div>
@@ -718,9 +720,9 @@ footer{background:var(--black);border-top:1px solid var(--bd);padding:36px 48px;
           <div class="tg-label">Delivery Leadership — Day-to-Day Project Anchors</div>
           <div class="team-cards">
             <div class="tcard" onclick="openBio('am')">
-              <div class="tcard-av" style="background:#E8DFF5;color:#6046E8;font-size:16px">AS</div>
-              <div class="tcard-role">Strategist</div>
-              <div class="tcard-name">Aminta Sow</div>
+              <div class="tcard-av" style="background:#E8DFF5;color:#6046E8;background-image:url('https://www.ghostnoteagency.com/wp-content/uploads/2026/07/Screenshot-2026-07-08-at-12.01.36-PM-800x800.png');font-size:0">AS</div>
+              <div class="tcard-role">Strategy Lead</div>
+              <div class="tcard-name">Aminata Sow</div>
               <div class="tcard-title" style="color:rgba(9,9,9,.5)">Strategy Lead</div>
               <div class="tcard-cta">Read Bio ↗</div>
             </div>
@@ -905,59 +907,62 @@ footer{background:var(--black);border-top:1px solid var(--bd);padding:36px 48px;
     <div class="sec-hd-row">
       <div class="sec-hd-left">
         <span class="sec-eye">Investment</span>
-        <h2 class="sec-title">One price.<br><em>Simple and even.</em></h2>
-        <p class="sec-sub">The full brand foundation, both phases, delivered over four months at a flat monthly rate. Structured to keep the investment manageable while you're pre-revenue.</p>
+        <h2 class="sec-title">One engagement.<br><em>Built to last.</em></h2>
+        <p class="sec-sub">The full brand foundation and launch system, both phases, delivered as a single four-month engagement. One team, one price, one continuous run from a blank page to a live, registerable brand.</p>
       </div>
       <button class="sec-toggle" onclick="toggleSec(this)">+</button>
     </div>
     <div class="sec-body collapsed" id="body-pricing">
       <div class="pr-split">
         <div>
-          <span class="pr-lbl">Full Foundation — Phases 1 + 2</span>
-          <div class="pr-amt">$60,000<small>$15,000 / month across 4 months</small></div>
+          <span class="pr-lbl">Full Foundation &amp; Launch — Phases 1 + 2</span>
+          <div class="pr-amt">$85,000<small>all in · $21,250 / month across 4 months</small></div>
         </div>
         <div>
-          <p class="pr-note">One simple structure. The full foundation — from a blank page to a live, registerable brand — delivered over four months at a flat monthly rate. No lump sum up front, no surprises. You spread the investment evenly across the engagement, which keeps it manageable while you're pre-revenue and matches your spend to the work as it happens.</p>
+          <p class="pr-note">This is a senior team building the thing your entire series will be built on, from strategy through to a live site. Positioning, narrative, a full visual identity, a registration-ready web build, and event collateral, all developed as one system rather than a stack of disconnected deliverables. The investment reflects the depth of the work and the value of getting it right the first time, so every event you run after this pulls from one clear source instead of starting over.</p>
         </div>
       </div>
 
       <table class="b-tbl">
-        <tr><td class="b-ph">Month 1 — Discovery &amp; Foundation begins</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:25%"></div></div></td><td class="b-amt">$15,000</td></tr>
-        <tr><td class="b-ph">Month 2 — Positioning, narrative &amp; foundation lock</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:50%"></div></div></td><td class="b-amt">$15,000</td></tr>
-        <tr><td class="b-ph">Month 3 — Identity development</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:75%"></div></div></td><td class="b-amt">$15,000</td></tr>
-        <tr><td class="b-ph">Month 4 — Web &amp; collateral build, launch</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:100%"></div></div></td><td class="b-amt">$15,000</td></tr>
-        <tr class="tot"><td class="b-tot-ph">Total — Phases 01 + 02</td><td class="b-bar-cell"></td><td class="b-tot-amt">$60,000</td></tr>
+        <tr><td class="b-ph">Month 1 — Discovery, research &amp; positioning begins</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:25%"></div></div></td><td class="b-amt">$21,250</td></tr>
+        <tr><td class="b-ph">Month 2 — Narrative, voice &amp; foundation lock</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:50%"></div></div></td><td class="b-amt">$21,250</td></tr>
+        <tr><td class="b-ph">Month 3 — Visual identity development</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:75%"></div></div></td><td class="b-amt">$21,250</td></tr>
+        <tr><td class="b-ph">Month 4 — Web build, event collateral &amp; launch</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:100%"></div></div></td><td class="b-amt">$21,250</td></tr>
+        <tr class="tot"><td class="b-tot-ph">Total — Phases 01 + 02</td><td class="b-bar-cell"></td><td class="b-tot-amt">$85,000</td></tr>
       </table>
 
       <div class="opt-grid" style="grid-template-columns:1fr 1fr">
         <div class="opt feat">
-          <div class="opt-tag">What's Included</div>
-          <div class="opt-name">Everything, Both Phases</div>
-          <div class="opt-amt">$60,000 <small>all in</small></div>
+          <div class="opt-tag">What You Get</div>
+          <div class="opt-name">The Full Foundation &amp; Launch</div>
+          <div class="opt-amt">$85,000 <small>all in</small></div>
           <ul class="opt-ul">
-            <li>Phase 1 — discovery, positioning, narrative, voice, naming</li>
-            <li>Phase 2 — visual identity, logo system, color and type</li>
-            <li>Live landing page with event registration</li>
+            <li>Discovery &amp; research with the mothers of Beaverton</li>
+            <li>Positioning: vision, mission, values, and the space you own</li>
+            <li>Brand narrative, voice, and messaging system</li>
+            <li>Naming and tagline direction for the series</li>
+            <li>Full visual identity: logo system, color, type</li>
+            <li>Live landing page with event registration, built to scale</li>
             <li>Event collateral: flyer, signage, race-day essentials</li>
             <li>Brand toolkit so the system holds without us</li>
           </ul>
-          <div class="opt-best"><strong>One team, one timeline.</strong> A continuous run from a blank page to a live, registerable brand, well ahead of June 2027.</div>
+          <div class="opt-best"><strong>One team, one timeline.</strong> A senior group building your foundation straight through to a live, registerable brand, well ahead of June 2027.</div>
         </div>
         <div class="opt">
-          <div class="opt-tag">How Payment Works</div>
-          <div class="opt-name">$15K / Month × 4</div>
-          <div class="opt-amt">$15,000 <small>per month</small></div>
+          <div class="opt-tag">How It's Structured</div>
+          <div class="opt-name">$21,250 / Month × 4</div>
+          <div class="opt-amt">$21,250 <small>per month</small></div>
           <ul class="opt-ul">
-            <li>Flat monthly rate across the four-month engagement</li>
-            <li>No large sum due at kickoff</li>
+            <li>A single four-month engagement, billed evenly</li>
             <li>Spend matched to the work as it's delivered</li>
-            <li>Predictable and easy to plan around while pre-revenue</li>
+            <li>Predictable monthly rhythm you can plan around</li>
+            <li>No change orders for anything in the scope above</li>
           </ul>
-          <div class="opt-best">Built for a founder managing cash flow. The same full scope, paid in even monthly steps rather than one hit.</div>
+          <div class="opt-best">The full scope, structured as an even monthly commitment across the life of the engagement.</div>
         </div>
       </div>
 
-      <p class="pr-note" style="margin-top:32px">Phase 3, the ongoing marketing engine, is optional and scoped separately once you're ready to grow the audience, so it stays off this figure until you want it.</p>
+      <p class="pr-note" style="margin-top:32px">Phase 3, the ongoing marketing engine, is scoped separately once you're ready to grow the audience, so it stays off this figure until you want it. Everything above is fixed scope at a fixed price.</p>
     </div>
   </div>
 </section>
@@ -1058,12 +1063,13 @@ var bios={
     av:'AA',avBg:'rgba(200,241,53,.15)',avC:'#C8F135',
     photo:'https://www.ghostnoteagency.com/wp-content/uploads/2024/04/Alfred_2024-700x700.jpg',
     role:'Account Lead',name:'Alfred Adarkwah',title:'Director of Growth',
-    body:`<p>Fredo is your point of contact end to end. He's the person who makes sure the engagement stays pointed at the one thing that matters most for a first event: a start line that actually fills.</p><p>As Director of Growth at Ghost Note, he owns the relationship from the first conversation through scope, delivery, and everything after. For a pre-revenue founder building something new, that means one person who understands both the brand you're trying to build and the business reality you're building it in, keeping the whole team aligned around it.</p>`
+    body:`<p>Fredo is your point of contact end to end. He's the person who makes sure the engagement stays pointed at the one thing that matters most for a first event: a start line that actually fills.</p><p>As Director of Growth at Ghost Note, he owns the relationship from the first conversation through scope, delivery, and everything after. For a founder building something new, that means one person who understands both the brand you're trying to build and the business you're building it for, keeping the whole team aligned around it.</p>`
   },
   am:{
     av:'AS',avBg:'#E8DFF5',avC:'#6046E8',
-    role:'Strategist',name:'Aminta Sow',title:'Strategy Lead',
-    body:`<p>Aminta leads strategy for the engagement: positioning, narrative, and voice. She's the one turning what we learn about the mothers of Beaverton into a foundation the whole brand is built on: what it stands for, what it sounds like, and why it earns a Saturday morning.</p><p>Her work grounds every downstream decision, from the logo to the flyer to event number four. Get the strategy right and everything after it gets clearer, faster, and cheaper. That's the value she anchors in Phase 1.</p>`
+    photo:'https://www.ghostnoteagency.com/wp-content/uploads/2026/07/Screenshot-2026-07-08-at-12.01.36-PM-800x800.png',
+    role:'Strategy Lead',name:'Aminata Sow',title:'Strategy Lead',
+    body:`<p>Aminata leads strategy for the engagement: positioning, narrative, and voice. She's the one turning what we learn about the mothers of Beaverton into a foundation the whole brand is built on: what it stands for, what it sounds like, and why it earns a Saturday morning.</p><p>Her work grounds every downstream decision, from the logo to the flyer to event number four. Get the strategy right and everything after it gets clearer, faster, and cheaper. That's the value she anchors in Phase 1.</p>`
   },
   ad:{
     av:'AK',avBg:'#E1F0E8',avC:'#0F6E56',
@@ -1155,7 +1161,7 @@ function openLink(url){window.open(url,'_blank');}
 function pwSubmit(){
   var val=document.getElementById('pw-input').value;
   var err=document.getElementById('pw-error');
-  if(val==='@GNBeaverton'){
+  if(val==='beaverton'){
     var gate=document.getElementById('pw-gate');
     gate.style.opacity='0';gate.style.pointerEvents='none';
     setTimeout(function(){gate.style.display='none';},650);
