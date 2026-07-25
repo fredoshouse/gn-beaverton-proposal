@@ -1,0 +1,9 @@
+# Netlify configuration — static single-page site, no build step.
+[build]
+  publish = "."
+  command = ""
+
+# Optional: uncomment to enable Netlify's built-in password protection
+# (requires a plan that supports it) instead of the client-side gate.
+# [context.production]
+#   [context.production.environment]

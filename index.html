@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ghost Note × The Beaverton Run</title>
+<meta property="og:title" content="Ghost Note × The Beaverton Run">
+<meta property="og:description" content="Brand Foundation & Launch System — Confidential Proposal 2026">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;min-width:0}
+html,body{overflow-x:hidden;max-width:100%}
+:root{
+  --lime:#C8F135;--purple:#6046E8;--pd:#4530B0;--pl:#EBE7FD;
+  --black:#090909;--d2:#111;--d3:#181818;
+  --cream:#F0EDE4;--cream2:#E6E2D8;--white:#FAFAF8;
+  --bd:rgba(255,255,255,.09);--bl:rgba(9,9,9,.1);
+  --md:rgba(255,255,255,.52);--ml:rgba(9,9,9,.52);
+  --ff:'Editorial New','Playfair Display',Georgia,serif;
+  --fg:'Staff Grotesque','DM Sans',system-ui,sans-serif;
+  --script:'Dancing Script',cursive;
+}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:#fff;font-family:var(--fg);font-weight:400;font-size:15px;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--fg)}
+img{display:block;max-width:100%}
+
+.topbar{height:5px;background:var(--lime)}
+
+nav{position:sticky;top:0;z-index:200;background:rgba(9,9,9,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+.nav-bar{display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:48px;gap:12px}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-logo-txt{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lime)}
+.nav-center{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--md);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-menu-btn{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:none;border:1px solid var(--bd);color:var(--lime);padding:6px 14px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0}
+.nav-menu-btn:hover{background:rgba(200,241,53,.08);border-color:var(--lime)}
+.nav-panel{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1);background:rgba(9,9,9,.98);border-bottom:0 solid var(--bd)}
+.nav-panel.open{max-height:400px;border-bottom-width:1px}
+.nav-links-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--bd);padding:1px}
+.nav-links-grid a{display:block;padding:18px 20px;background:var(--black);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--md);transition:all .15s}
+.nav-links-grid a:hover,.nav-links-grid a:focus{background:var(--d2);color:var(--lime)}
+.nav-cs{display:flex;justify-content:center;padding:16px 40px}
+.cs-btn{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--lime);color:var(--black);border:none;padding:11px 28px;cursor:pointer;transition:all .2s}
+.cs-btn:hover{background:#d4f740}
+
+.hero{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 48px 60px;overflow:hidden}
+.hero-img{position:absolute;inset:0;background:url('https://i1.t4s.cz/galleries/667/428863.jpg') center/cover no-repeat}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.6) 38%,rgba(0,0,0,.3) 65%,rgba(0,0,0,.1) 100%)}
+.hero-glow{position:absolute;top:-20%;right:-10%;width:60%;height:70%;background:radial-gradient(circle,rgba(200,241,53,.10),transparent 62%);pointer-events:none}
+.hero-c{position:relative;z-index:2}
+.hero-eye{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--lime);margin-bottom:20px}
+.hero-title{font-family:var(--ff);font-weight:700;font-size:clamp(52px,8.5vw,118px);line-height:.88}
+.hero-title em{color:var(--lime);font-style:italic}
+.hero-rule{width:40px;height:2px;background:var(--lime);margin:26px 0}
+.hero-sub{font-size:clamp(14px,1.4vw,18px);font-weight:300;max-width:540px;color:rgba(255,255,255,.68);line-height:1.72;margin-bottom:44px}
+.hero-btns{display:flex;gap:12px;margin-bottom:40px;flex-wrap:wrap}
+.hero-btn-primary{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--lime);color:var(--black);border:none;padding:12px 28px;cursor:pointer;transition:all .2s}
+.hero-btn-primary:hover{background:#d4f740}
+.hero-btn-sec{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:none;color:#fff;border:1px solid rgba(255,255,255,.3);padding:12px 28px;cursor:pointer;transition:all .2s}
+.hero-btn-sec:hover{border-color:var(--lime);color:var(--lime)}
+.hero-stats{display:flex;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.13);padding-top:22px;gap:0}
+.h-stat{padding-right:36px}
+.h-stat label{display:block;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:4px}
+.h-stat span{font-size:16px;font-weight:600}
+
+section{border-top:1px solid var(--bd);overflow:hidden}
+section.sl{background:var(--cream);color:var(--black);border-top-color:var(--bl)}
+section.sl2{background:var(--cream2);color:var(--black);border-top-color:var(--bl)}
+section.sd2{background:var(--d2);border-top-color:var(--bd)}
+section.sd3{background:var(--d3);border-top-color:var(--bd)}
+section.sw{background:var(--white);color:var(--black);border-top-color:var(--bl)}
+.sec-inner{padding:80px 48px}
+.sec-hd-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px;gap:16px}
+.sec-eye{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--purple);margin-bottom:12px;display:block}
+section:not(.sl):not(.sl2):not(.sw) .sec-eye{color:var(--lime)}
+.sec-title{font-family:var(--ff);font-weight:700;font-size:clamp(28px,4.5vw,64px);line-height:.9;margin-bottom:18px}
+.sec-title em{font-style:italic;color:var(--purple)}
+section:not(.sl):not(.sl2):not(.sw) .sec-title em{color:var(--lime)}
+.sec-sub{font-size:clamp(13px,1.3vw,16px);font-weight:400;max-width:580px;opacity:.56;line-height:1.72}
+.sec-toggle{background:none;border:1px solid var(--bd);color:var(--md);font-size:16px;width:34px;height:34px;cursor:pointer;flex-shrink:0;transition:all .2s;margin-top:4px;display:flex;align-items:center;justify-content:center}
+section.sl .sec-toggle,section.sl2 .sec-toggle,section.sw .sec-toggle{border-color:var(--bl);color:var(--ml)}
+.sec-toggle:hover{background:var(--purple);color:#fff;border-color:var(--purple)}
+.sec-body{overflow:hidden;transition:max-height .5s cubic-bezier(.4,0,.2,1),opacity .35s ease}
+.sec-body.collapsed{max-height:0!important;opacity:0;pointer-events:none}
+
+.who-g{display:grid;grid-template-columns:1fr 240px;gap:64px;align-items:start}
+.who-hl{font-family:var(--ff);font-weight:700;font-size:clamp(20px,2.8vw,36px);line-height:1.15;margin-bottom:24px}
+.who-hl em{font-style:italic;color:var(--lime)}
+.who-b p{font-size:14px;line-height:1.82;color:var(--md);margin-bottom:12px}
+.who-b p.lead{color:#fff;font-size:15px;font-weight:500}
+.cap-g{margin-bottom:22px}
+.cap-l{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);margin-bottom:7px;display:block}
+.cap-ul{list-style:none}
+.cap-ul li{font-size:12px;color:var(--md);padding:5px 0;border-bottom:1px solid var(--bd)}
+.cap-ul li:last-child{border-bottom:none}
+
+.exec-g{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.exec-c p{font-size:14px;line-height:1.82;color:var(--ml);margin-bottom:12px}
+.exec-c p.lead{color:var(--black);font-size:16px;font-weight:500}
+.exec-pq{border-left:3px solid var(--purple);padding:18px 0 18px 22px;margin-top:24px}
+.exec-pq p{font-family:var(--ff);font-size:17px;font-style:italic;line-height:1.6;color:var(--black);margin:0}
+
+.tensions{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);margin-bottom:64px}
+.tn{background:var(--black);padding:40px 28px;transition:background .2s}
+.tn:hover{background:var(--d2)}
+.tn-n{font-size:60px;font-weight:700;line-height:1;color:var(--purple);margin-bottom:12px}
+.tn-t{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;margin-bottom:9px}
+.tn-b{font-size:13px;line-height:1.78;color:var(--md)}
+.opp-section{border-top:2px solid var(--purple)}
+.opp-label{font-size:10px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--purple);padding:18px 0 14px;display:block;border-bottom:1px solid var(--bd)}
+.opp-row{display:grid;grid-template-columns:44px 1fr 1fr;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--bd)}
+.opp-row:last-child{border-bottom:none}
+.opp-num{font-size:10px;font-weight:700;letter-spacing:.16em;color:rgba(255,255,255,.22)}
+.opp-hl{font-family:var(--ff);font-size:clamp(16px,2vw,26px);font-style:italic;line-height:1.1;color:#fff}
+.opp-hl em{color:var(--lime);font-style:normal}
+.opp-body{font-size:13px;line-height:1.72;color:var(--md)}
+
+.pillars{border:1px solid var(--bl)}
+.pillar{border-bottom:1px solid var(--bl);padding:26px 32px;display:grid;grid-template-columns:44px 200px 1fr;gap:24px;align-items:start;transition:background .15s}
+.pillar:last-child{border-bottom:none}
+.pillar:hover{background:rgba(96,70,232,.04)}
+.p-n{font-size:38px;font-weight:700;color:var(--purple);line-height:1}
+.p-t{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--black);padding-top:2px;line-height:1.25}
+.p-b{font-size:13px;line-height:1.78;color:var(--ml);padding-top:2px}
+
+.ph-acc{border-bottom:1px solid var(--bd)}
+.ph-acc:first-child{border-top:1px solid var(--bd)}
+.ph-btn{width:100%;background:none;border:none;cursor:pointer;color:#fff;padding:24px 40px;text-align:left;display:grid;grid-template-columns:64px 1fr 200px 44px;gap:16px;align-items:center;transition:background .2s}
+.ph-btn:hover{background:rgba(255,255,255,.02)}
+.ph-btn.on{background:rgba(96,70,232,.08);border-bottom:1px solid rgba(96,70,232,.3)}
+.ph-n{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lime)}
+.ph-name{font-size:clamp(13px,1.6vw,17px);font-weight:600;text-transform:uppercase;letter-spacing:.03em;line-height:1.1}
+.ph-sub{font-size:12px;color:var(--md);font-style:italic;text-align:right;line-height:1.4}
+.ph-arr{font-size:16px;color:var(--purple);text-align:center;transition:transform .3s}
+.ph-btn.on .ph-arr{transform:rotate(180deg)}
+.ph-body{display:none;padding:40px;background:rgba(255,255,255,.015);border-top:1px solid rgba(255,255,255,.05)}
+.ph-body.open{display:block}
+.ph-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px}
+.ph-lbl{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:8px;display:block}
+.ph-p{font-size:14px;line-height:1.8;color:var(--md);margin-bottom:10px}
+.ph-out{font-size:13px;line-height:1.72;color:var(--md);padding:14px 16px;border-left:2px solid var(--purple);font-style:italic;margin-top:16px}
+.ph-ul{list-style:none}
+.ph-ul li{font-size:13px;line-height:1.6;color:var(--md);padding:8px 0;border-bottom:1px solid var(--bd);display:flex;gap:8px;align-items:baseline}
+.ph-ul li::before{content:'+';color:var(--purple);font-weight:700;flex-shrink:0;font-size:11px}
+.ph-dels{display:flex;flex-direction:column;gap:5px}
+.ph-del{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:10px 12px;border:1px solid var(--bd);transition:all .2s;cursor:default}
+.ph-del:hover{background:var(--purple);color:#fff;border-color:var(--purple)}
+
+.team-intro{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:start;margin-bottom:56px}
+.team-intro-hl{font-family:var(--ff);font-weight:700;font-size:clamp(20px,2.8vw,34px);line-height:1.2;margin-bottom:20px;color:var(--black)}
+.team-intro-b p{font-size:14px;line-height:1.78;color:var(--ml);margin-bottom:10px}
+.team-groups{display:flex;flex-direction:column;gap:40px}
+.tg-label{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.tg-label::after{content:'';flex:1;height:1px;background:var(--bl)}
+.team-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tcard{background:var(--black);border:1px solid rgba(9,9,9,.12);padding:20px 16px;transition:all .2s;cursor:pointer;position:relative}
+.tcard:hover{border-color:var(--purple);transform:translateY(-2px)}
+.tcard:hover .tcard-cta{opacity:1}
+.tcard-av{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;margin-bottom:14px;letter-spacing:.04em;background-size:cover;background-position:center top;background-repeat:no-repeat;flex-shrink:0}
+.tcard-role{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--purple);margin-bottom:6px}
+.tcard-name{font-size:14px;font-weight:700;text-transform:uppercase;line-height:1.1;margin-bottom:4px;color:#fff}
+.tcard-title{font-size:12px;color:rgba(9,9,9,.5)}
+.tcard-cta{position:absolute;bottom:14px;right:14px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--purple);opacity:0;transition:opacity .2s}
+
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:500;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .25s}
+.modal-bg.show{opacity:1;pointer-events:all}
+.modal-box{background:var(--black);border:1px solid rgba(255,255,255,.12);max-width:640px;width:100%;max-height:90vh;max-height:90dvh;overflow-y:auto;position:relative;transform:translateY(12px);transition:transform .3s}
+.modal-bg.show .modal-box{transform:translateY(0)}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:1px solid var(--bd);color:var(--md);width:30px;height:30px;font-size:16px;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.modal-close:hover{background:var(--purple);border-color:var(--purple);color:#fff}
+.modal-header{padding:36px 36px 24px;border-bottom:1px solid var(--bd);display:flex;gap:20px;align-items:flex-start}
+.modal-av{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0;background-size:cover;background-position:center top}
+.modal-role{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--purple);margin-bottom:6px}
+.modal-name{font-size:22px;font-weight:700;text-transform:uppercase;line-height:1;color:#fff;margin-bottom:3px}
+.modal-title{font-size:13px;color:var(--md)}
+.modal-body{padding:28px 36px 36px}
+.modal-body p{font-size:14px;line-height:1.82;color:var(--md);margin-bottom:14px}
+.modal-body p:last-child{margin-bottom:0}
+
+.pm-g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--bl);border:1px solid var(--bl)}
+.pm-col{background:var(--cream);padding:36px 28px}
+.pm-col-t{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--purple);margin-bottom:16px;display:block}
+.pm-ul{list-style:none}
+.pm-ul li{font-size:13px;line-height:1.6;color:var(--ml);padding:9px 0;border-bottom:1px solid var(--bl);display:flex;gap:8px;align-items:baseline}
+.pm-ul li::before{content:'→';color:var(--purple);flex-shrink:0;font-size:11px}
+.pm-tp-item{margin-bottom:20px}
+.pm-tp-title{font-size:13px;font-weight:600;color:var(--black);margin-bottom:4px}
+.pm-tp-body{font-size:13px;line-height:1.7;color:var(--ml);margin-bottom:3px}
+.pm-tp-who{font-size:12px;color:var(--purple);font-weight:600}
+
+.gantt-outer{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.gantt{min-width:620px}
+.g-hdr{display:grid;grid-template-columns:180px 1fr;margin-bottom:2px}
+.g-months{display:flex}
+.g-m{flex:1;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(9,9,9,.38);padding:0 4px;text-align:center;border-left:1px solid rgba(9,9,9,.08)}
+.g-row{display:grid;grid-template-columns:180px 1fr;align-items:center;border-bottom:1px solid rgba(9,9,9,.07)}
+.g-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;color:rgba(9,9,9,.6);padding:8px 12px 8px 0;line-height:1.3}
+.g-track{position:relative;height:38px}
+.g-cells{position:absolute;inset:0;display:flex}
+.g-cell{flex:1;border-left:1px solid rgba(9,9,9,.06)}
+.g-bar{position:absolute;top:6px;bottom:6px;border-radius:2px;display:flex;align-items:center;padding:0 9px;overflow:hidden}
+.g-bar-t{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.gantt-legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}
+.gl-item{display:flex;align-items:center;gap:7px}
+.gl-dot{width:9px;height:9px;border-radius:2px;flex-shrink:0}
+.gl-txt{font-size:11px;font-weight:500;color:rgba(9,9,9,.5)}
+.gantt-note{font-size:12px;color:rgba(9,9,9,.45);margin-top:14px;line-height:1.6}
+
+.pr-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:48px}
+.pr-lbl{font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--md);margin-bottom:10px;display:block}
+.pr-amt{font-family:var(--ff);font-size:clamp(56px,9vw,116px);font-weight:700;line-height:.85;color:var(--lime)}
+.pr-amt small{font-size:.32em;font-weight:600;letter-spacing:.02em;color:var(--md);font-family:var(--fg);display:block;margin-top:14px}
+.pr-note{font-size:14px;line-height:1.78;color:var(--md)}
+.b-tbl{width:100%;border-collapse:collapse;border:1px solid var(--bd)}
+.b-tbl tr{border-bottom:1px solid var(--bd)}
+.b-tbl tr:last-child{border-bottom:none}
+.b-tbl td{padding:16px 20px;font-size:13px}
+.b-ph{color:var(--md)}
+.b-amt{font-weight:700;color:#fff;text-align:right;white-space:nowrap}
+.b-bar-cell{width:40%;padding:16px 12px}
+.b-track{height:6px;background:rgba(255,255,255,.06);border-radius:2px}
+.b-fill{height:100%;background:var(--purple);border-radius:2px}
+.b-tbl tr.tot td{border-top:2px solid var(--purple)}
+.b-tot-ph{font-weight:700;color:#fff;font-size:14px}
+.b-tot-amt{font-family:var(--ff);font-size:clamp(18px,2.5vw,28px);font-weight:700;color:var(--lime);text-align:right}
+.opt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);margin-top:56px}
+.opt{background:var(--black);padding:32px 26px;display:flex;flex-direction:column}
+.opt.feat{background:rgba(96,70,232,.10)}
+.opt-tag{font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:14px;min-height:12px}
+.opt-name{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--md);margin-bottom:8px}
+.opt-amt{font-family:var(--ff);font-size:44px;font-weight:700;line-height:1;color:#fff;margin-bottom:6px}
+.opt-amt small{font-family:var(--fg);font-size:12px;font-weight:500;color:var(--md);letter-spacing:0}
+.opt-ul{list-style:none;margin:16px 0 20px}
+.opt-ul li{font-size:12.5px;line-height:1.5;color:var(--md);padding:7px 0;border-bottom:1px solid var(--bd);display:flex;gap:8px;align-items:baseline}
+.opt-ul li::before{content:'+';color:var(--purple);font-weight:700;flex-shrink:0;font-size:11px}
+.opt-best{font-size:12px;line-height:1.7;color:var(--md);border-top:1px solid var(--bd);padding-top:14px;margin-top:auto}
+.opt-best strong{color:var(--lime);font-weight:700}
+
+.two-col-notes{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.note-t{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--purple);margin-bottom:14px}
+.note-ul{list-style:none}
+.note-ul li{font-size:13px;line-height:1.72;color:var(--ml);padding:9px 0;border-bottom:1px solid var(--bl);display:flex;gap:10px;align-items:baseline}
+.note-ul li::before{content:'→';color:var(--purple);flex-shrink:0;font-size:11px}
+.note-intro{font-size:14px;line-height:1.72;color:var(--ml);margin-bottom:16px}
+
+.con-g{display:grid;grid-template-columns:320px 1fr;gap:56px}
+.c-tbl{width:100%;border-collapse:collapse;border:1px solid var(--bl)}
+.c-tbl tr{border-bottom:1px solid var(--bl)}
+.c-tbl tr:last-child{border-bottom:none}
+.c-tbl td{padding:11px 14px;font-size:13px}
+.c-lbl{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ml);border-right:1px solid var(--bl)!important;background:rgba(0,0,0,.03);width:120px}
+.c-val{color:var(--black);font-weight:500}
+.c-close{background:var(--black);color:#fff;padding:32px}
+.c-close-t{font-family:var(--ff);font-weight:700;font-style:italic;font-size:clamp(18px,2.2vw,28px);line-height:1.3;margin-bottom:14px}
+.c-close-t em{color:var(--lime)}
+.c-close p{font-size:13px;line-height:1.78;color:var(--md);margin-bottom:10px}
+
+.closing-quote-wrap{text-align:center;padding:40px 24px;margin-top:32px;border-top:1px solid rgba(96,70,232,.2)}
+.closing-quote-text{font-family:var(--script);font-size:clamp(22px,3.5vw,38px);color:var(--purple);line-height:1.4;display:block;margin-bottom:12px}
+.closing-attribution{font-family:var(--script);font-size:clamp(16px,2vw,22px);color:rgba(96,70,232,.65);display:block}
+
+footer{background:var(--black);border-top:1px solid var(--bd);padding:36px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.ft-by{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:6px}
+.ft-logo-txt{font-weight:700;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
+.ft-r p{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.28);line-height:2;text-align:right}
+
+@media(max-width:960px){
+  .nav-bar{padding:0 16px}
+  .nav-center{display:none}
+  .nav-links-grid{grid-template-columns:1fr 1fr}
+  .nav-cs{padding:12px 16px}
+  .hero{padding:16px 20px 48px}
+  .h-stat{padding-right:18px;min-width:80px}
+  .sec-inner{padding:56px 20px}
+  .who-g,.exec-g,.pr-split,.con-g,.team-intro,.two-col-notes,.opt-grid{grid-template-columns:1fr!important;gap:28px}
+  .tensions{grid-template-columns:1fr}
+  .opp-row{grid-template-columns:28px minmax(0,1fr)!important;gap:10px!important}
+  .opp-body{display:none}
+  .opp-hl{font-size:clamp(14px,4vw,20px)!important}
+  .pillar{grid-template-columns:36px 1fr!important;gap:10px;padding:20px 16px}
+  .p-b{grid-column:1/-1}
+  .p-n{font-size:28px}
+  .ph-btn{grid-template-columns:40px 1fr 28px!important;gap:8px;padding:14px 16px}
+  .ph-sub{display:none}
+  .ph-body{padding:20px 16px}
+  .ph-grid{grid-template-columns:1fr!important;gap:20px}
+  .team-cards{display:flex!important;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scrollbar-width:none;gap:8px;padding-bottom:8px}
+  .team-cards::-webkit-scrollbar{display:none}
+  .tcard{flex:0 0 72%;scroll-snap-align:start;min-width:0}
+  .pm-g{grid-template-columns:1fr}
+  .g-hdr,.g-row{grid-template-columns:80px 1fr!important}
+  .g-lbl{font-size:8px;padding-right:6px}
+  .g-bar-t{font-size:9px}
+  .b-bar-cell{display:none}
+  .b-tbl td{padding:12px 12px}
+  .modal-bg{padding:0;align-items:flex-end}
+  .modal-box{max-width:100%;max-height:92vh;max-height:92dvh;border-bottom:none}
+  .modal-header{padding:24px 20px 18px;gap:14px}
+  .modal-body{padding:20px 20px 36px}
+  footer{flex-direction:column;text-align:center;padding:28px 20px;gap:14px}
+  .ft-r p{text-align:center}
+}
+@media(max-width:480px){
+  .sec-title{font-size:28px!important}
+  .hero-title{font-size:clamp(38px,12vw,60px)!important}
+  .hero{padding:12px 16px 40px}
+  .sec-inner{padding:44px 16px}
+  .nav-bar{padding:0 12px}
+  .opp-row{grid-template-columns:1fr!important}
+  .opp-num{display:none}
+  .tcard{flex:0 0 82%}
+  .team-intro{grid-template-columns:1fr;gap:20px}
+  .pr-amt{font-size:clamp(46px,15vw,80px)!important}
+  .opt-amt{font-size:36px}
+  .ph-btn{padding:12px 12px}
+}
+</style>
+</head>
+<body>
+
+<!-- PASSWORD GATE -->
+<div id="pw-gate" style="position:fixed;inset:0;background:#000;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;transition:opacity .6s ease">
+  <div style="width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;gap:0">
+    <img src="https://www.ghostnoteagency.com/wp-content/uploads/2022/02/GN_2020_Logo-horizontal-small-1.png" alt="Ghost Note" style="height:56px;width:auto;object-fit:contain;margin-bottom:52px;opacity:.9" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div style="font-family:'Staff Grotesque','DM Sans',system-ui,sans-serif;font-size:20px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);margin-bottom:52px;display:none">Ghost Note</div>
+    <div style="font-family:'Staff Grotesque','DM Sans',system-ui,sans-serif;font-size:9px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px;text-align:center">Confidential — Enter Access Code</div>
+    <div style="width:100%;position:relative">
+      <input id="pw-input" type="password" placeholder="••••••••••••••" autocomplete="off" spellcheck="false"
+        style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Staff Grotesque','DM Sans',system-ui,sans-serif;font-size:15px;padding:16px 96px 16px 20px;outline:none;letter-spacing:.06em;transition:border-color .2s;-webkit-appearance:none"
+        oninput="pwClear()" onkeydown="if(event.key==='Enter')pwSubmit()">
+      <button id="pw-toggle" onclick="pwToggle()" type="button" title="Show/hide"
+        style="position:absolute;right:52px;top:0;bottom:0;width:44px;background:none;border:none;border-right:1px solid rgba(255,255,255,.08);cursor:pointer;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);transition:color .2s;padding:0">
+        <svg id="pw-eye-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+        </svg>
+      </button>
+      <button onclick="pwSubmit()" style="position:absolute;right:0;top:0;bottom:0;width:52px;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);transition:color .2s;font-size:18px" onmouseover="this.style.color='#C8F135'" onmouseout="this.style.color='rgba(255,255,255,.3)'">→</button>
+    </div>
+    <div id="pw-error" style="font-family:'Staff Grotesque','DM Sans',system-ui,sans-serif;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#E8563A;margin-top:14px;opacity:0;transition:opacity .3s">Incorrect access code</div>
+    <div style="font-family:'Staff Grotesque','DM Sans',system-ui,sans-serif;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.12);margin-top:48px;text-align:center">Ghost Note × The Beaverton Run — Brand Foundation &amp; Launch</div>
+  </div>
+</div>
+
+<div class="topbar"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-bar">
+    <div class="nav-logo"><img src="https://www.ghostnoteagency.com/wp-content/uploads/2022/02/GN_2020_Logo-horizontal-small-1.png" alt="Ghost Note" style="height:22px;width:auto;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="nav-logo-txt" style="display:none">Ghost Note</span></div>
+    <div class="nav-center">The Beaverton Run</div>
+    <button class="nav-menu-btn" onclick="toggleMenu(this)">Menu <span id="menu-arrow">↓</span></button>
+  </div>
+  <div class="nav-panel" id="nav-panel">
+    <div class="nav-links-grid">
+      <a href="#about" onclick="closeMenu()">Agency</a>
+      <a href="#overview" onclick="closeMenu()">Overview</a>
+      <a href="#landscape" onclick="closeMenu()">Opportunity</a>
+      <a href="#strategy" onclick="closeMenu()">Approach</a>
+      <a href="#phases" onclick="closeMenu()">Phases</a>
+      <a href="#team" onclick="closeMenu()">Core Team</a>
+      <a href="#pm" onclick="closeMenu()">Management</a>
+      <a href="#timeline" onclick="closeMenu()">Timeline</a>
+      <a href="#pricing" onclick="closeMenu()">Investment</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+    <div class="nav-cs">
+      <button class="cs-btn" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'});closeMenu()">See the Options &nbsp;↓</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-c">
+    <div class="hero-eye">Brand Foundation &amp; Launch System — Confidential Proposal 2026</div>
+    <h1 class="hero-title">Built for her.<br><em>Built to last.</em></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">A brand foundation for a 5K and kids run centered on mothers. Designed for one morning in Beaverton, and built to carry every event that follows.</p>
+    <div class="hero-btns">
+      <button class="hero-btn-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">See the Options &nbsp;↓</button>
+      <button class="hero-btn-sec" onclick="document.getElementById('overview').scrollIntoView({behavior:'smooth'})">Read Proposal &nbsp;↓</button>
+    </div>
+    <div class="hero-stats">
+      <div class="h-stat"><label>Prepared By</label><span>Ghost Note</span></div>
+      <div class="h-stat"><label>Investment</label><span>$60,000</span></div>
+      <div class="h-stat"><label>Structure</label><span>$15K / mo</span></div>
+      <div class="h-stat"><label>Duration</label><span>4 Months</span></div>
+      <div class="h-stat"><label>First Event</label><span>June 2027</span></div>
+      <div class="h-stat"><label>Phases</label><span>1 + 2</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO WE ARE -->
+<section id="about">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left"><span class="sec-eye">Who We Are</span></div>
+      <button class="sec-toggle" onclick="toggleSec(this)">−</button>
+    </div>
+    <div class="sec-body" id="body-about">
+      <div class="who-g">
+        <div class="who-b">
+          <h2 class="who-hl">A cross-cultural studio <em>crafting brands and stories</em> that honor the beautiful complexity of the modern world.</h2>
+          <p class="lead">Ghost Note partners with movement makers and iconic organizations alike. Through our Resonance Practice, we center cultural intuition, intelligence rooted in study, and lived experience to create work that doesn't just speak to audiences, but connects with them.</p>
+          <p>You came to us with something specific. Not a race to produce, but a brand to build. That distinction is why this proposal is structured the way it is. We're not arriving as the vendor who prints the flyer. We're the partner who helps you find what the flyer should say.</p>
+          <p>Whether we're building brands, platforms, or stories, we design for meaning first.</p>
+        </div>
+        <div>
+          <div class="cap-g">
+            <span class="cap-l">Strategic Capabilities</span>
+            <ul class="cap-ul">
+              <li>Research &amp; Discovery</li>
+              <li>Naming</li>
+              <li>Brand Strategy</li>
+              <li>Creative Strategy</li>
+              <li>Social Media Strategy</li>
+              <li>Campaign Strategy</li>
+            </ul>
+          </div>
+          <div class="cap-g">
+            <span class="cap-l">Creative Capabilities</span>
+            <ul class="cap-ul">
+              <li>Brand Identity</li>
+              <li>Creative Direction</li>
+              <li>Art Direction</li>
+              <li>UX/UI Design &amp; Development</li>
+              <li>Print &amp; Event Collateral</li>
+              <li>Branded Content</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXEC SUMMARY -->
+<section class="sl" id="overview">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">Executive Summary</span>
+        <h2 class="sec-title">A race people<br><em>come back to.</em></h2>
+        <p class="sec-sub">The opportunity is to build a brand foundation strong enough to launch one event and flexible enough to carry the series that follows, starting lean while you're pre-revenue.</p>
+      </div>
+      <button class="sec-toggle" onclick="toggleSec(this)">+</button>
+    </div>
+    <div class="sec-body collapsed" id="body-overview">
+      <div class="exec-g">
+        <div class="exec-c">
+          <p class="lead">Most run series begin as a logistics project. Pick a date, map a course, print a bib. The ones that last begin as a brand. A feeling people want to be part of, a reason to come back next year and bring someone with them.</p>
+          <p>Centering this on mothers isn't a demographic choice. It's a positioning choice, and it's the strongest thing you have. It means the brand can say something no generic community 5K can say. The work is to find that thing and say it clearly, before anyone designs a logo.</p>
+          <p>We'd approach this as a phased engagement spanning strategy, storytelling, identity, web, and print, sequenced around what you actually need at each stage and priced so you spend when it counts.</p>
+          <div class="exec-pq"><p>"Get the story right, and the flyer, the site, and the second event all get easier."</p></div>
+        </div>
+        <div class="exec-c">
+          <p>You asked us to recommend the right scope and pricing rather than execute against a spec. We've taken that seriously, and responded with a real point of view on how to sequence this against a pre-revenue reality.</p>
+          <p>The result is one simple structure: the full foundation, both phases, delivered over four months at a flat monthly rate. It begins with the strategy phase, the asset everything else is built on, and runs straight through to a live, registerable brand well ahead of June 2027, without a large sum due up front.</p>
+          <p>The result should be a brand that feels made for the mothers of Beaverton, works on race day, and still holds up at event number four.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITY / LANDSCAPE -->
+<section id="landscape">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">The Opportunity</span>
+        <h2 class="sec-title">Not just a race.<br>The first chapter of<br>something people <em>belong to.</em></h2>
+        <p class="sec-sub">The June 2027 5K introduces the brand while signaling what the whole series is becoming. It has to do both at once, and do them well. Here's what that requires.</p>
+      </div>
+      <button class="sec-toggle" onclick="toggleSec(this)">+</button>
+    </div>
+    <div class="sec-body collapsed" id="body-landscape">
+      <div class="tensions">
+        <div class="tn">
+          <div class="tn-n">01</div>
+          <div class="tn-t">Building From Zero</div>
+          <p class="tn-b">You're pre-revenue with the first event eleven months out and no audience yet. The brand has to earn attention before it can earn a registration, which means the story has to be right before the spend ramps up.</p>
+        </div>
+        <div class="tn">
+          <div class="tn-n">02</div>
+          <div class="tn-t">One Event, A Whole Series</div>
+          <p class="tn-b">Everything built for June 2027 has to extend cleanly to events two, three, and four. Design in isolation creates a folder of one-off files. Design as a system creates one source of truth that gets cheaper to draw from every time.</p>
+        </div>
+        <div class="tn">
+          <div class="tn-n">03</div>
+          <div class="tn-t">Made For Her, Not Adapted</div>
+          <p class="tn-b">A mother can tell the difference between a brand built for her and a generic 5K with "moms" added to the flyer. Recognition is the whole game, and it only comes from a foundation that actually understands her Saturday morning.</p>
+        </div>
+      </div>
+      <div class="opp-section">
+        <span class="opp-label">What This Project Needs To Do</span>
+        <div class="opp-row">
+          <div class="opp-num">01</div>
+          <div class="opp-hl">Clarify what this brand <em>stands for</em></div>
+          <div class="opp-body">Positioning, values, and narrative come first — before anything gets designed. Every downstream decision, from the logo to the second event, gets cheaper and faster once this is settled.</div>
+        </div>
+        <div class="opp-row">
+          <div class="opp-num">02</div>
+          <div class="opp-hl">Make a mother <em>feel seen</em></div>
+          <div class="opp-body">This is the introduction of a space that centers her. The brand should dramatize that, not describe it. The goal is that she sees it and feels it was made for her, not adapted for her.</div>
+        </div>
+        <div class="opp-row">
+          <div class="opp-num">03</div>
+          <div class="opp-hl">Convert attention into <em>registrations</em></div>
+          <div class="opp-body">A landing page simple enough to launch now and structured enough to become a full site. Registration is the only metric that matters in year one.</div>
+        </div>
+        <div class="opp-row">
+          <div class="opp-num">04</div>
+          <div class="opp-hl">Arrive as a <em>series</em>, not a one-off</div>
+          <div class="opp-body">Everything built for the first event should extend to the ones after it. One identity, one voice, one registration flow — reused, not rebuilt.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY / APPROACH -->
+<section class="sl2" id="strategy">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">Our Approach</span>
+        <h2 class="sec-title">The values that guide<br>every <em>creative decision.</em></h2>
+        <p class="sec-sub">These are the values we bring to every engagement. Here's what each one means for a race built around mothers.</p>
+      </div>
+      <button class="sec-toggle" onclick="toggleSec(this)">+</button>
+    </div>
+    <div class="sec-body collapsed" id="body-strategy">
+      <div class="pillars">
+        <div class="pillar">
+          <div class="p-n">01</div>
+          <div class="p-t">Strategy Rooted in Lived Experience</div>
+          <div class="p-b">We center real people, not personas. That means talking to mothers in Beaverton before we write a word of positioning. The truths and cultural insights come from them, not from a segment definition.</div>
+        </div>
+        <div class="pillar">
+          <div class="p-n">02</div>
+          <div class="p-t">Platforms Co-Built With You</div>
+          <div class="p-b">We build with you, not around you. You're in the room the whole way, so you're never the one having to explain your own brand to the next designer, printer, or partner you hire.</div>
+        </div>
+        <div class="pillar">
+          <div class="p-n">03</div>
+          <div class="p-t">Cultural Fluency That Earns Trust</div>
+          <div class="p-b">Storytelling that resonates, not performs. A mother can tell the difference between a brand that understands her Saturday morning and one that has focus-grouped it. The first one earns her return.</div>
+        </div>
+        <div class="pillar">
+          <div class="p-n">04</div>
+          <div class="p-t">Craft That Lasts Beyond Launch</div>
+          <div class="p-b">We design for long-term resonance, not quick wins. Event two is not an afterthought. The identity, the site architecture, and the print system are designed as a system from day one.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASES -->
+<section id="phases">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">Scope &amp; Phases</span>
+        <h2 class="sec-title">Three phases,<br>sequenced so you<br><em>spend when it counts.</em></h2>
+        <p class="sec-sub">Phase 1 is small, high-leverage, and leaves you holding a real asset. Phases 2 and 3 begin only when you're ready, closer to the event. Tap each phase to expand.</p>
+      </div>
+      <button class="sec-toggle" onclick="toggleSec(this)">+</button>
+    </div>
+    <div class="sec-body collapsed" id="body-phases">
+
+      <div class="ph-acc">
+        <button class="ph-btn" onclick="tph(this)">
+          <span class="ph-n">Phase 01</span>
+          <span class="ph-name">Brand Foundation &amp; Story</span>
+          <span class="ph-sub">Insights · Months 1–2</span>
+          <span class="ph-arr">↓</span>
+        </button>
+        <div class="ph-body">
+          <div class="ph-grid">
+            <div>
+              <span class="ph-lbl">Focus</span>
+              <p class="ph-p">Who this brand is, what it stands for, and the narrative that carries across every event. This is the asset everything else is built on. The first two months take you from kickoff to a locked foundation.</p>
+              <div class="ph-out">The truest thing about why this event centers mothers, shaped into a foundation any future partner can run with.</div>
+            </div>
+            <div>
+              <span class="ph-lbl">What's Included</span>
+              <ul class="ph-ul">
+                <li>Discovery — conversations with mothers, landscape analysis</li>
+                <li>Strategic workshop with you and any partners</li>
+                <li>Positioning: vision, mission, values, the space you own</li>
+                <li>Brand narrative — the story across site, flyer, start line</li>
+                <li>Voice &amp; messaging guide with example copy</li>
+                <li>Naming &amp; tagline direction for the series</li>
+              </ul>
+            </div>
+            <div>
+              <span class="ph-lbl">Deliverables</span>
+              <div class="ph-dels">
+                <div class="ph-del">Insights Summary</div>
+                <div class="ph-del">Positioning Platform</div>
+                <div class="ph-del">Brand Narrative</div>
+                <div class="ph-del">Voice &amp; Messaging Guide</div>
+                <div class="ph-del">Naming Direction</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ph-acc">
+        <button class="ph-btn" onclick="tph(this)">
+          <span class="ph-n">Phase 02</span>
+          <span class="ph-name">Identity &amp; Landing Experience</span>
+          <span class="ph-sub">Creation · Months 3–4</span>
+          <span class="ph-arr">↓</span>
+        </button>
+        <div class="ph-body">
+          <div class="ph-grid">
+            <div>
+              <span class="ph-lbl">Focus</span>
+              <p class="ph-p">Now we make it visible. A visual identity and a live landing page with registration — simple enough to launch immediately, structured to grow into a full site as new events come online.</p>
+              <div class="ph-out">A live, registerable brand well ahead of June 2027, with runway left for marketing.</div>
+            </div>
+            <div>
+              <span class="ph-lbl">What's Included</span>
+              <ul class="ph-ul">
+                <li>Brand identity: logo system, color, type</li>
+                <li>Creative direction across web and print</li>
+                <li>UX/UI design + build of a landing page with registration</li>
+                <li>Site architecture designed to expand event by event</li>
+                <li>Event collateral: flyer, signage, race-day essentials</li>
+                <li>Brand toolkit so the system holds without us</li>
+              </ul>
+            </div>
+            <div>
+              <span class="ph-lbl">Deliverables</span>
+              <div class="ph-dels">
+                <div class="ph-del">Logo System</div>
+                <div class="ph-del">Color &amp; Type</div>
+                <div class="ph-del">Live Landing Page</div>
+                <div class="ph-del">Registration Flow</div>
+                <div class="ph-del">Event Collateral</div>
+                <div class="ph-del">Brand Toolkit</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ph-acc">
+        <button class="ph-btn" onclick="tph(this)">
+          <span class="ph-n">Phase 03</span>
+          <span class="ph-name">Audience &amp; Marketing Engine</span>
+          <span class="ph-sub">Activation · Ongoing, optional</span>
+          <span class="ph-arr">↓</span>
+        </button>
+        <div class="ph-body">
+          <div class="ph-grid">
+            <div>
+              <span class="ph-lbl">Focus</span>
+              <p class="ph-p">Building an audience from zero. A practical playbook and the assets to fill the starting line. Scoped once we see how fast you want to grow, and priced to match.</p>
+              <div class="ph-out">A start line that fills, and a playbook you can run for every event after the first.</div>
+            </div>
+            <div>
+              <span class="ph-lbl">What's Included</span>
+              <ul class="ph-ul">
+                <li>Marketing &amp; content strategy: channels, rhythm, reach</li>
+                <li>Social media strategy with templates you run yourself</li>
+                <li>Campaign concept and registration-driving assets</li>
+                <li>Measurement setup and local partnership angles</li>
+              </ul>
+            </div>
+            <div>
+              <span class="ph-lbl">Deliverables</span>
+              <div class="ph-dels">
+                <div class="ph-del">Content Strategy</div>
+                <div class="ph-del">Social Strategy</div>
+                <div class="ph-del">Campaign Concept</div>
+                <div class="ph-del">Measurement Setup</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CORE TEAM -->
+<section class="sl" id="team">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">Core Team</span>
+        <h2 class="sec-title">The people<br><em>behind the work.</em></h2>
+      </div>
+      <button class="sec-toggle" onclick="toggleSec(this)">+</button>
+    </div>
+    <div class="sec-body collapsed" id="body-team">
+      <div class="team-intro">
+        <div><h3 class="team-intro-hl">A small, senior team, <em style="color:var(--purple)">no handoffs.</em></h3></div>
+        <div class="team-intro-b">
+          <p>For an engagement this focused, you work directly with the people doing the work. Your Account Lead is your single point of contact from kickoff through delivery. Your Strategist owns positioning, narrative, and voice. Your Project Manager keeps timelines and coordination on track, and your Design Lead anchors the identity and the landing experience.</p>
+          <p>We believe in being involved from the very beginning, joining at discovery and staying aligned through each phase of strategy, design, and build. No layers, no telephone game, no meeting someone new at handoff.</p>
+          <p style="margin-top:18px;padding:14px 18px;background:rgba(96,70,232,.06);border-left:3px solid var(--purple);font-size:13px;color:var(--black);font-weight:500"><strong style="color:var(--purple);font-weight:700;letter-spacing:.02em">Note on staffing:</strong> The team below reflects the proposed roster. If the web build calls for it, we may bring in a trusted development partner, confirmed once we're awarded and scope the site.</p>
+        </div>
+      </div>
+      <div class="team-groups">
+        <div>
+          <div class="tg-label">Delivery Leadership — Day-to-Day Project Anchors</div>
+          <div class="team-cards">
+            <div class="tcard" onclick="openBio('am')">
+              <div class="tcard-av" style="background:#E8DFF5;color:#6046E8;font-size:16px">AS</div>
+              <div class="tcard-role">Strategist</div>
+              <div class="tcard-name">Aminta Sow</div>
+              <div class="tcard-title" style="color:rgba(9,9,9,.5)">Strategy Lead</div>
+              <div class="tcard-cta">Read Bio ↗</div>
+            </div>
+            <div class="tcard" onclick="openBio('ad')">
+              <div class="tcard-av" style="background:#E1F0E8;color:#0F6E56;font-size:16px">AK</div>
+              <div class="tcard-role">Project Manager</div>
+              <div class="tcard-name">Adam Akisanya</div>
+              <div class="tcard-title" style="color:rgba(9,9,9,.5)">Sr. Program Manager</div>
+              <div class="tcard-cta">Read Bio ↗</div>
+            </div>
+            <div class="tcard" onclick="openBio('na')">
+              <div class="tcard-av" style="background:#F5E9D4;color:#8A5A1F;background-image:url('https://www.ghostnoteagency.com/wp-content/uploads/2025/06/C539D1F8-9801-429F-ABAA-B236DE7B634A_bw-700x700.jpg');font-size:0">NA</div>
+              <div class="tcard-role">Design Lead</div>
+              <div class="tcard-name">Natalia Arias</div>
+              <div class="tcard-title" style="color:rgba(9,9,9,.5)">Creative Lead, Design</div>
+              <div class="tcard-cta">Read Bio ↗</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="tg-label">Leadership — Executive Stakeholders Guiding the Project</div>
+          <div class="team-cards">
+            <div class="tcard" style="border-color:rgba(200,241,53,.3)" onclick="openBio('aa')">
+              <div class="tcard-av" style="background:rgba(200,241,53,.15);color:var(--lime);background-image:url('https://www.ghostnoteagency.com/wp-content/uploads/2024/04/Alfred_2024-700x700.jpg');font-size:0">AA</div>
+              <div class="tcard-role" style="color:var(--lime)">Account Lead</div>
+              <div class="tcard-name">Alfred Adarkwah</div>
+              <div class="tcard-title" style="color:rgba(9,9,9,.5)">Director of Growth</div>
+              <div class="tcard-cta">Read Bio ↗</div>
+            </div>
+            <div class="tcard" onclick="openBio('rs')">
+              <div class="tcard-av" style="background:#EBE7FD;color:#6046E8;background-image:url('https://www.ghostnoteagency.com/wp-content/uploads/2024/04/Reggie_2024-700x700.jpg');font-size:0">RS</div>
+              <div class="tcard-role">Executive Lead</div>
+              <div class="tcard-name">Reggie Snowden</div>
+              <div class="tcard-title" style="color:rgba(9,9,9,.5)">President &amp; Co-Founder</div>
+              <div class="tcard-cta">Read Bio ↗</div>
+            </div>
+            <div class="tcard" onclick="openBio('sd')">
+              <div class="tcard-av" style="background:#FAECE7;color:#993C1D;background-image:url('https://www.ghostnoteagency.com/wp-content/uploads/2024/04/Sarah-D_2024-700x700.jpg');font-size:0">SD</div>
+              <div class="tcard-role">Strategy Direction</div>
+              <div class="tcard-name">Sarah Duarte</div>
+              <div class="tcard-title" style="color:rgba(9,9,9,.5)">Director of Strategy</div>
+              <div class="tcard-cta">Read Bio ↗</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-bg" id="bio-modal" onclick="closeBioOnBg(event)">
+        <div class="modal-box">
+          <button class="modal-close" onclick="closeBio()">×</button>
+          <div class="modal-header">
+            <div class="modal-av" id="m-av"></div>
+            <div>
+              <div class="modal-role" id="m-role"></div>
+              <div class="modal-name" id="m-name"></div>
+              <div class="modal-title" id="m-title"></div>
+            </div>
+          </div>
+          <div class="modal-body" id="m-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT MANAGEMENT -->
+<section class="sl2" id="pm">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">Project Management &amp; Collaboration</span>
+        <h2 class="sec-title">Clear rhythm.<br><em>Intentional progress.</em></h2>
+        <p class="sec-sub">We'd manage this through a clear rhythm of planning, review, and decision-making designed to keep momentum high while respecting how you like to work.</p>
+      </div>
+      <button class="sec-toggle" onclick="toggleSec(this)">+</button>
+    </div>
+    <div class="sec-body collapsed" id="body-pm">
+      <div class="pm-g">
+        <div class="pm-col">
+          <span class="pm-col-t">Our Approach</span>
+          <p style="font-size:13px;line-height:1.78;color:var(--ml);margin-bottom:18px">A single decision-maker on your side and a consolidated review at each milestone keeps this fast and clean.</p>
+          <ul class="pm-ul">
+            <li>Shared plan with milestones, owners, and dependencies</li>
+            <li>Working sessions sized to each phase</li>
+            <li>Milestone reviews for key approvals</li>
+            <li>Centralized feedback and a simple decision log</li>
+            <li>Proactive surfacing of risks and tradeoffs</li>
+          </ul>
+        </div>
+        <div class="pm-col">
+          <span class="pm-col-t">Touchpoints</span>
+          <div class="pm-tp-item">
+            <div class="pm-tp-title">Check-ins</div>
+            <p class="pm-tp-body">Short recurring reviews to share progress:</p>
+            <div class="pm-tp-who">You + Core Team</div>
+          </div>
+          <div class="pm-tp-item">
+            <div class="pm-tp-title">Work Sessions</div>
+            <p class="pm-tp-body">Interactive sessions at discovery and identity:</p>
+            <div class="pm-tp-who">You + Core Team</div>
+          </div>
+          <div class="pm-tp-item">
+            <div class="pm-tp-title">Milestone Reviews</div>
+            <p class="pm-tp-body">Formal sign-off at the end of each phase:</p>
+            <div class="pm-tp-who">You + any partners you want in the room</div>
+          </div>
+        </div>
+        <div class="pm-col">
+          <span class="pm-col-t">How We Keep It Simple</span>
+          <p style="font-size:13px;line-height:1.78;color:var(--ml);margin-bottom:16px">Light tooling, consistent documentation, so you always know where things stand.</p>
+          <ul class="pm-ul">
+            <li>Shared tracker with live milestone visibility</li>
+            <li>One place for design review and feedback</li>
+            <li>Recaps after every key session</li>
+            <li>Staging link for the landing page as soon as practical</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="sw" id="timeline">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">Timeline</span>
+        <h2 class="sec-title">Four months.<br>Kickoff to <em>live registration.</em></h2>
+        <p class="sec-sub">Phase 1 and Phase 2 run back-to-back across four months, putting a live, registerable brand well ahead of June 2027, with real runway left for marketing rather than a scramble.</p>
+      </div>
+      <button class="sec-toggle" onclick="toggleSec(this)">+</button>
+    </div>
+    <div class="sec-body collapsed" id="body-timeline">
+      <div class="gantt-outer">
+        <div class="gantt">
+          <div class="g-hdr">
+            <div></div>
+            <div class="g-months">
+              <div class="g-m">Month 1</div><div class="g-m">Month 2</div><div class="g-m">Month 3</div><div class="g-m">Month 4</div>
+            </div>
+          </div>
+          <div class="g-row">
+            <div class="g-lbl">Discovery &amp; Immersion</div>
+            <div class="g-track"><div class="g-cells"><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+              <div class="g-bar" style="left:0%;width:37.5%;background:var(--purple)"><span class="g-bar-t" style="color:#fff">Discovery</span></div></div>
+          </div>
+          <div class="g-row">
+            <div class="g-lbl">Positioning &amp; Narrative</div>
+            <div class="g-track"><div class="g-cells"><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+              <div class="g-bar" style="left:25%;width:31.25%;background:var(--pd)"><span class="g-bar-t" style="color:#fff">Story &amp; Voice</span></div></div>
+          </div>
+          <div class="g-row">
+            <div class="g-lbl">Foundation Lock</div>
+            <div class="g-track"><div class="g-cells"><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+              <div class="g-bar" style="left:43.75%;width:12.5%;background:#8A72F0"><span class="g-bar-t" style="color:#fff">Lock</span></div></div>
+          </div>
+          <div class="g-row">
+            <div class="g-lbl">Identity Development</div>
+            <div class="g-track"><div class="g-cells"><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+              <div class="g-bar" style="left:50%;width:31.25%;background:var(--lime)"><span class="g-bar-t" style="color:#090909">Identity</span></div></div>
+          </div>
+          <div class="g-row">
+            <div class="g-lbl">Web &amp; Collateral Build</div>
+            <div class="g-track"><div class="g-cells"><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div></div>
+              <div class="g-bar" style="left:68.75%;width:31.25%;background:#A5C72E"><span class="g-bar-t" style="color:#090909">Build &amp; Launch</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="gantt-legend">
+        <div class="gl-item"><span class="gl-dot" style="background:var(--purple)"></span><span class="gl-txt">Phase 1 — Insights (Months 1–2)</span></div>
+        <div class="gl-item"><span class="gl-dot" style="background:var(--lime)"></span><span class="gl-txt">Phase 2 — Creation (Months 3–4)</span></div>
+      </div>
+      <p class="gantt-note">This works because every phase eliminates ambiguity before it reaches the next one. Consolidated feedback at each milestone, not rolling. Kickoff timing is the only dependency we don't control. Everything else is on us. Phase 3 runs on its own cadence once you're ready.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING / INVESTMENT -->
+<section class="sd2" id="pricing">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">Investment</span>
+        <h2 class="sec-title">One price.<br><em>Simple and even.</em></h2>
+        <p class="sec-sub">The full brand foundation, both phases, delivered over four months at a flat monthly rate. Structured to keep the investment manageable while you're pre-revenue.</p>
+      </div>
+      <button class="sec-toggle" onclick="toggleSec(this)">+</button>
+    </div>
+    <div class="sec-body collapsed" id="body-pricing">
+      <div class="pr-split">
+        <div>
+          <span class="pr-lbl">Full Foundation — Phases 1 + 2</span>
+          <div class="pr-amt">$60,000<small>$15,000 / month across 4 months</small></div>
+        </div>
+        <div>
+          <p class="pr-note">One simple structure. The full foundation — from a blank page to a live, registerable brand — delivered over four months at a flat monthly rate. No lump sum up front, no surprises. You spread the investment evenly across the engagement, which keeps it manageable while you're pre-revenue and matches your spend to the work as it happens.</p>
+        </div>
+      </div>
+
+      <table class="b-tbl">
+        <tr><td class="b-ph">Month 1 — Discovery &amp; Foundation begins</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:25%"></div></div></td><td class="b-amt">$15,000</td></tr>
+        <tr><td class="b-ph">Month 2 — Positioning, narrative &amp; foundation lock</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:50%"></div></div></td><td class="b-amt">$15,000</td></tr>
+        <tr><td class="b-ph">Month 3 — Identity development</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:75%"></div></div></td><td class="b-amt">$15,000</td></tr>
+        <tr><td class="b-ph">Month 4 — Web &amp; collateral build, launch</td><td class="b-bar-cell"><div class="b-track"><div class="b-fill" style="width:100%"></div></div></td><td class="b-amt">$15,000</td></tr>
+        <tr class="tot"><td class="b-tot-ph">Total — Phases 01 + 02</td><td class="b-bar-cell"></td><td class="b-tot-amt">$60,000</td></tr>
+      </table>
+
+      <div class="opt-grid" style="grid-template-columns:1fr 1fr">
+        <div class="opt feat">
+          <div class="opt-tag">What's Included</div>
+          <div class="opt-name">Everything, Both Phases</div>
+          <div class="opt-amt">$60,000 <small>all in</small></div>
+          <ul class="opt-ul">
+            <li>Phase 1 — discovery, positioning, narrative, voice, naming</li>
+            <li>Phase 2 — visual identity, logo system, color and type</li>
+            <li>Live landing page with event registration</li>
+            <li>Event collateral: flyer, signage, race-day essentials</li>
+            <li>Brand toolkit so the system holds without us</li>
+          </ul>
+          <div class="opt-best"><strong>One team, one timeline.</strong> A continuous run from a blank page to a live, registerable brand, well ahead of June 2027.</div>
+        </div>
+        <div class="opt">
+          <div class="opt-tag">How Payment Works</div>
+          <div class="opt-name">$15K / Month × 4</div>
+          <div class="opt-amt">$15,000 <small>per month</small></div>
+          <ul class="opt-ul">
+            <li>Flat monthly rate across the four-month engagement</li>
+            <li>No large sum due at kickoff</li>
+            <li>Spend matched to the work as it's delivered</li>
+            <li>Predictable and easy to plan around while pre-revenue</li>
+          </ul>
+          <div class="opt-best">Built for a founder managing cash flow. The same full scope, paid in even monthly steps rather than one hit.</div>
+        </div>
+      </div>
+
+      <p class="pr-note" style="margin-top:32px">Phase 3, the ongoing marketing engine, is optional and scoped separately once you're ready to grow the audience, so it stays off this figure until you want it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ASSUMPTIONS -->
+<section class="sl2">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">Key Assumptions &amp; Scope Notes</span>
+        <h2 class="sec-title">Setting the project<br><em>up to move.</em></h2>
+        <p class="sec-sub">These assumptions shape both the cost and the timeline. Being clear about them up front protects everyone and keeps the engagement running well.</p>
+      </div>
+      <button class="sec-toggle" onclick="toggleSec(this)">+</button>
+    </div>
+    <div class="sec-body collapsed" id="body-assumptions">
+      <div class="two-col-notes">
+        <div>
+          <div class="note-t">Key Assumptions</div>
+          <ul class="note-ul">
+            <li>You designate a single decision-maker for consolidated approvals at each milestone</li>
+            <li>Feedback is consolidated at each review, not delivered on a rolling basis</li>
+            <li>Registration platform selection confirmed before the web build begins</li>
+            <li>Any existing materials or research shared ahead of discovery</li>
+            <li>Phase 2 begins within a reasonable window of Phase 1 close, or is re-scoped</li>
+            <li>Fees are based on the hours required per phase; work beyond agreed scope would be discussed and approved first</li>
+            <li>Delays in assets, feedback, or approvals will move final delivery accordingly</li>
+          </ul>
+        </div>
+        <div>
+          <div class="note-t">Out of Scope Unless Added</div>
+          <p class="note-intro">To keep expectations clear, the following are not assumed to be included unless explicitly scoped:</p>
+          <ul class="note-ul">
+            <li>Media buying, paid placement, or ad spend</li>
+            <li>Photography, video production, or original illustration</li>
+            <li>Merchandise design, apparel, or race-day environmental build</li>
+            <li>Registration platform fees or third-party software costs</li>
+            <li>Print production and vendor management</li>
+            <li>Ongoing site maintenance beyond handoff and training</li>
+            <li>Full copywriting across all pages beyond core brand copy</li>
+            <li>Travel expenses</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sw" id="contact">
+  <div class="sec-inner">
+    <div class="sec-hd-row">
+      <div class="sec-hd-left">
+        <span class="sec-eye">Firm Contact Information</span>
+        <h2 class="sec-title">Let's build something<br>people <em>come back to.</em></h2>
+      </div>
+    </div>
+    <div class="con-g">
+      <table class="c-tbl">
+        <tr><td class="c-lbl">Organization</td><td class="c-val">Ghost Note Agency</td></tr>
+        <tr><td class="c-lbl">Contact</td><td class="c-val">Alfred Adarkwah</td></tr>
+        <tr><td class="c-lbl">Title</td><td class="c-val">Director of Growth</td></tr>
+        <tr><td class="c-lbl">Email</td><td class="c-val">alfred@ghostnoteagency.com</td></tr>
+        <tr><td class="c-lbl">Website</td><td class="c-val" style="color:var(--purple)">ghostnoteagency.com</td></tr>
+      </table>
+      <div class="c-close">
+        <div class="c-close-t">The most effective route isn't to design a logo and hope the meaning follows. It's to find the truest thing about why this event centers mothers, and build <em>everything</em> from there.</div>
+        <p>That's why we've kept the investment simple: one price, paid evenly across four months, for a foundation built straight through to a live, registerable brand with real runway before June 2027.</p>
+        <p>If any version of this feels right, reply and tell me which option speaks to you, or where it's off. I'll turn it into a proper scope and we can lock a kickoff. If you'd rather talk it through first, I'm always up for that.</p>
+        <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)">
+          <p style="font-size:14px;line-height:1.78;color:var(--md);margin-bottom:6px">I really enjoyed our conversation, and I'd love to help you build this.</p>
+        </div>
+        <div class="closing-quote-wrap">
+          <span class="closing-quote-text">Built for her. Built to last.</span>
+          <span class="closing-attribution">— With care, Fredo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="ft-by">Presented by</div>
+    <div><img src="https://www.ghostnoteagency.com/wp-content/uploads/2022/02/GN_2020_Logo-horizontal-small-1.png" alt="Ghost Note" style="height:25px;width:auto;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="ft-logo-txt" style="display:none">Ghost Note</span></div>
+  </div>
+  <div class="ft-r">
+    <p>The Beaverton Run — Brand Foundation &amp; Launch System</p>
+    <p>Alfred Adarkwah, Director of Growth</p>
+    <p style="opacity:.5">Confidential — 2026</p>
+  </div>
+</footer>
+
+<script>
+var bios={
+  aa:{
+    av:'AA',avBg:'rgba(200,241,53,.15)',avC:'#C8F135',
+    photo:'https://www.ghostnoteagency.com/wp-content/uploads/2024/04/Alfred_2024-700x700.jpg',
+    role:'Account Lead',name:'Alfred Adarkwah',title:'Director of Growth',
+    body:`<p>Fredo is your point of contact end to end. He's the person who makes sure the engagement stays pointed at the one thing that matters most for a first event: a start line that actually fills.</p><p>As Director of Growth at Ghost Note, he owns the relationship from the first conversation through scope, delivery, and everything after. For a pre-revenue founder building something new, that means one person who understands both the brand you're trying to build and the business reality you're building it in, keeping the whole team aligned around it.</p>`
+  },
+  am:{
+    av:'AS',avBg:'#E8DFF5',avC:'#6046E8',
+    role:'Strategist',name:'Aminta Sow',title:'Strategy Lead',
+    body:`<p>Aminta leads strategy for the engagement: positioning, narrative, and voice. She's the one turning what we learn about the mothers of Beaverton into a foundation the whole brand is built on: what it stands for, what it sounds like, and why it earns a Saturday morning.</p><p>Her work grounds every downstream decision, from the logo to the flyer to event number four. Get the strategy right and everything after it gets clearer, faster, and cheaper. That's the value she anchors in Phase 1.</p>`
+  },
+  ad:{
+    av:'AK',avBg:'#E1F0E8',avC:'#0F6E56',
+    role:'Project Manager',name:'Adam Akisanya',title:'Sr. Program Manager',
+    body:`<p>Adam keeps the engagement moving. As Senior Program Manager, he owns timelines, coordination, and the review rhythm that keeps a two-phase build on track without turning into a scramble as June 2027 approaches.</p><p>He's the person making sure milestones land, feedback is consolidated, and you always know where things stand. For a founder wearing every hat, that's one less thing to carry: a single anchor for how and when the work gets done.</p>`
+  },
+  na:{
+    av:'NA',avBg:'#F5E9D4',avC:'#8A5A1F',
+    photo:'https://www.ghostnoteagency.com/wp-content/uploads/2025/06/C539D1F8-9801-429F-ABAA-B236DE7B634A_bw-700x700.jpg',
+    role:'Design Lead',name:'Natalia Arias',title:'Creative Lead, Design',
+    body:`<p>Natalia leads the visual identity and the landing experience. She brings the brand foundation to life as a look and a site, translating strategy and story into something people actually see, feel, and register through.</p><p>Her strength is building visual systems that hold up over time. For a run series that starts with one event and grows, that matters: the identity she builds for June 2027 is designed to still work at event two, three, and four, rather than being redesigned each time.</p>`
+  },
+  rs:{
+    av:'RS',avBg:'#EBE7FD',avC:'#6046E8',
+    photo:'https://www.ghostnoteagency.com/wp-content/uploads/2024/04/Reggie_2024-700x700.jpg',
+    role:'Executive Lead',name:'Reggie Snowden',title:'President & Co-Founder',
+    body:`<p>Reggie is a Co-Founder and President of Ghost Note and a passionate, empathic leader whose work centers on the art and discipline of relationship management. He serves as the agency's anchor for how we show up for our clients, our team, and our community.</p><p>For this engagement, Reggie brings executive partnership and makes sure the relationship is built for durability, not just deliverables. He's the person who makes sure the work matters beyond the contract.</p>`
+  },
+  sd:{
+    av:'SD',avBg:'#FAECE7',avC:'#993C1D',
+    photo:'https://www.ghostnoteagency.com/wp-content/uploads/2024/04/Sarah-D_2024-700x700.jpg',
+    role:'Strategy Direction',name:'Sarah Duarte',title:'Director of Strategy',
+    body:`<p>Sarah guides strategic direction across the engagement, making sure the positioning and narrative are grounded in real insight rather than assumption. She brings rigor to the discovery process and helps ensure what we learn about Beaverton's mothers actually shapes the brand.</p><p>She works closely with Fredo to keep strategy and story aligned from the first conversation through to the identity and the site.</p>`
+  }
+};
+
+function openBio(id){
+  var b=bios[id];if(!b)return;
+  var av=document.getElementById('m-av');
+  av.style.background=b.avBg;av.style.color=b.avC;
+  if(b.photo){
+    av.style.backgroundImage="url('"+b.photo+"')";
+    av.style.backgroundSize='cover';av.style.backgroundPosition='center top';
+    av.style.fontSize='0';av.textContent=b.av;
+  } else {
+    av.style.backgroundImage='none';av.style.fontSize='18px';av.textContent=b.av;
+  }
+  document.getElementById('m-role').textContent=b.role;
+  document.getElementById('m-name').textContent=b.name;
+  document.getElementById('m-title').textContent=b.title;
+  document.getElementById('m-body').innerHTML=b.body;
+  document.getElementById('bio-modal').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeBio(){
+  document.getElementById('bio-modal').classList.remove('show');
+  document.body.style.overflow='';
+}
+function closeBioOnBg(e){if(e.target.id==='bio-modal')closeBio();}
+
+function toggleMenu(btn){
+  var p=document.getElementById('nav-panel');
+  var a=document.getElementById('menu-arrow');
+  p.classList.toggle('open');
+  a.textContent=p.classList.contains('open')?'↑':'↓';
+}
+function closeMenu(){
+  document.getElementById('nav-panel').classList.remove('open');
+  document.getElementById('menu-arrow').textContent='↓';
+}
+
+function toggleSec(btn){
+  var body=btn.closest('section').querySelector('.sec-body');
+  if(!body)return;
+  if(body.classList.contains('collapsed')){
+    body.classList.remove('collapsed');
+    body.style.maxHeight='0px';body.offsetHeight;
+    body.style.maxHeight=body.scrollHeight+'px';
+    setTimeout(function(){body.style.maxHeight='none';},520);
+    btn.textContent='−';
+  } else {
+    body.style.maxHeight=body.scrollHeight+'px';body.offsetHeight;
+    body.classList.add('collapsed');
+    btn.textContent='+';
+  }
+}
+
+function tph(btn){
+  var body=btn.nextElementSibling,open=btn.classList.contains('on');
+  document.querySelectorAll('.ph-btn').forEach(function(b){b.classList.remove('on');b.nextElementSibling.classList.remove('open');});
+  if(!open){
+    btn.classList.add('on');body.classList.add('open');
+    setTimeout(function(){btn.scrollIntoView({behavior:'smooth',block:'nearest'});},50);
+  }
+}
+
+function openLink(url){window.open(url,'_blank');}
+
+function pwSubmit(){
+  var val=document.getElementById('pw-input').value;
+  var err=document.getElementById('pw-error');
+  if(val==='@GNBeaverton'){
+    var gate=document.getElementById('pw-gate');
+    gate.style.opacity='0';gate.style.pointerEvents='none';
+    setTimeout(function(){gate.style.display='none';},650);
+  } else {
+    err.style.opacity='1';
+    var inp=document.getElementById('pw-input');
+    inp.style.borderColor='rgba(232,86,58,.6)';
+    setTimeout(function(){err.style.opacity='0';inp.style.borderColor='rgba(255,255,255,.12)';},2200);
+  }
+}
+function pwClear(){
+  document.getElementById('pw-error').style.opacity='0';
+  document.getElementById('pw-input').style.borderColor='rgba(255,255,255,.12)';
+}
+function pwToggle(){
+  var inp=document.getElementById('pw-input');
+  var showing=inp.type==='text';
+  inp.type=showing?'password':'text';
+  document.getElementById('pw-toggle').style.color=showing?'rgba(255,255,255,.3)':'rgba(200,241,53,.8)';
+  var icon=document.getElementById('pw-eye-icon');
+  icon.innerHTML=showing
+    ?'<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>'
+    :'<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/>';
+}
+
+window.addEventListener('load',function(){
+  var inp=document.getElementById('pw-input');if(inp)inp.focus();
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBio();});
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.sec-body').forEach(function(body){
+    if(body.id==='body-about')return;
+    body.classList.add('collapsed');body.style.maxHeight='0px';
+    var btn=body.closest('section').querySelector('.sec-toggle');
+    if(btn)btn.textContent='+';
+  });
+});
+</script>
+</body>
+</html>
